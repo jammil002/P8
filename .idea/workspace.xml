@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d31e8f0c-2e64-49b8-a0c7-50aeb42513d9" name="Changes" comment="started P8" />
+    <list default="true" id="d31e8f0c-2e64-49b8-a0c7-50aeb42513d9" name="Changes" comment="remove test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jammil002"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jammil002/P8.git",
+    "accountId": "2c350e30-b839-4cda-983d-9e8b23f73b50"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -34,7 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -97,11 +111,28 @@
       <option name="project" value="LOCAL" />
       <updated>1715541563980</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="started P8">
+      <option name="closed" value="true" />
+      <created>1715543081620</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715543081620</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove test">
+      <option name="closed" value="true" />
+      <created>1715543142011</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715543142011</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started P8" />
-    <option name="LAST_COMMIT_MESSAGE" value="started P8" />
+    <MESSAGE value="remove test" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove test" />
   </component>
 </project>
