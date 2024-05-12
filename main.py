@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
 from scipy.integrate import quad
 
 
@@ -79,3 +80,42 @@ riemannSumLog = computeRiemannSum(functionLog, 1, np.e, 1000000, method='midpoin
 
 # Output the results
 output = numericalIntegralSinPlusOne, riemannSumLog
+
+# Display the results
+print(f"Numerical integral of f(x) = sin(x) + 1 over [-π, π]: {numericalIntegralSinPlusOne}")
+print(f"Riemann sum of f(x) = ln(x) over [1, e] (midpoint method): {riemannSumLog}")
+
+np.random.seed(42)  # For reproducibility
+timeIntervals = np.arange(0, 31)  # 0 to 30 minutes
+downloadRates = np.abs(np.random.normal(50, 10, size=31))  # Mean rate: 50 Mbps, std: 10
+
+
+def fitFunction(t, a, b, c, d):
+    return a * t ** 3 + b * t ** 2 + c * t + d
+
+
+params, _ = curve_fit(fitFunction, timeIntervals, downloadRates)
+
+
+# Define the continuous download rate function R(t)
+def continuousDownloadRate(t):
+    a, b, c, d = params
+    return fitFunction(t, a, b, c, d)
+
+
+totalDataDownloaded = quad(continuousDownloadRate, 0, 30)[0]
+
+# Output the results
+print(f"Total data downloaded over 30 minutes: {totalDataDownloaded} MB")
+
+# Plotting the simulated data and the fitted function
+plt.figure(figsize=(10, 5))
+plt.scatter(timeIntervals, downloadRates, color='red', label='Simulated Data Rates (Mbps)')
+tModel = np.linspace(0, 30, 100)
+plt.plot(tModel, continuousDownloadRate(tModel), label='Fitted Rate Function R(t)', color='blue')
+plt.xlabel('Time (minutes)')
+plt.ylabel('Download Rate (Mbps)')
+plt.title('Download Rate over Time')
+plt.legend()
+plt.grid(True)
+plt.show()
